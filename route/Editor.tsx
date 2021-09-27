@@ -4,8 +4,8 @@ import {inject, observer} from 'mobx-react';
 import {IMainStore} from '../store';
 import {RouteComponentProps} from 'react-router-dom';
 import {Layout, Switch, classnames as cx, toast} from 'amis';
-import '../renderer/MyRenderer';
-import '../editor/MyRenderer';
+import '../renderer/ViewTable'
+import {TmsTablePlugin} from '../editor/ViewTable';
 
 let currentIndex = -1;
 
@@ -88,6 +88,7 @@ export default inject('store')(
                     $schemaUrl={schemaUrl}
                     iframeUrl={iframeUrl}
                     isMobile={store.isMobile}
+                    plugins={[TmsTablePlugin]}
                 />
             </Layout>
         );
