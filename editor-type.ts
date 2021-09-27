@@ -6,7 +6,8 @@ export interface amisEditorStore {
     [key: string]: any;
 }
 
-interface SubRendererInfo extends RendererScaffoldInfo {
+export type editorComponentList = SubRendererInfo[]
+export interface SubRendererInfo extends RendererScaffoldInfo {
     /**
      * 首次拖入的时候可以用来配置个表单。
      */
